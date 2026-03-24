@@ -1,0 +1,44 @@
+name: Auto-Generate README
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate README
+        run: |
+          echo "# Rahul Jangid 👨‍💻" > README.md
+          echo "## 🚀 About Me" >> README.md
+          echo "I am a MERN Stack Developer with strong problem-solving skills and hands-on experience in building full-stack web applications." >> README.md
+          echo "I have worked on multiple real-world projects including e-commerce, LMS, and admin dashboards." >> README.md
+
+          echo "## 🛠️ Skills" >> README.md
+          echo "- Frontend: HTML, CSS, JavaScript, React, Tailwind, MUI" >> README.md
+          echo "- Backend: Node.js, Express.js" >> README.md
+          echo "- Database: MongoDB, MySQL" >> README.md
+          echo "- Tools: Git, GitHub, CloudPanel, Postman" >> README.md
+
+          echo "## 📂 Projects" >> README.md
+          echo "- 🛍️ GulabiDecor - E-commerce website (Bedsheets & Decor)" >> README.md
+          echo "- 📊 T3_Stocks - LMS platform for trading courses" >> README.md
+          echo "- 🏥 Hospital Management System - React-based dashboard with search & dynamic data" >> README.md
+          echo "- 📝 Impulse Blog - React blog website with lazy loading" >> README.md
+          echo "- 🛒 AI E-commerce Website - Full-stack MERN project with AI features" >> README.md
+
+          echo "## 📫 Contact" >> README.md
+          echo "- Email: your@email.com" >> README.md
+          echo "- LinkedIn: https://linkedin.com/in/yourprofile" >> README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Rahul Jangid"
+          git config --global user.email "your@email.com"
+          git add README.md
+          git commit -m "Auto-update README" || echo "No changes to commit"
+          git push origin main
