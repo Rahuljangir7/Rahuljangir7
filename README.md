@@ -133,7 +133,7 @@ MVC  →  Layered  →  Clean Architecture  →  REST APIs  →  Microservices (
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Rahuljangir7&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8&v=2"/>
+<img src="https://github-profile-trophy.vercel.app/?username=Rahuljangir7&theme=tokyonight&no-frame=true&no-bg=true&column=7&margin-w=8"/>
 
 </div>
 
